@@ -1,3 +1,6 @@
+# Antes de probar el proyecto
+Antes de ejecutar la aplicación deberá de ejecutar el comando npm install para instalar las dependencias necesarias para el proyecto
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
