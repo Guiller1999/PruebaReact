@@ -1,0 +1,19 @@
+.thead-Sector tr{
+    background-image: linear-gradient(to right, #11998e 0%, #38ef7d 100%);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.tablaSectores tr:hover {
+    background-color: #eee !important;
+}
+
+.thead-Persona tr {
+    background-image: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}

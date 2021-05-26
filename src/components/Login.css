@@ -1,0 +1,45 @@
+.container-login {
+    background-color: #eee;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+.container-login h1 {
+    margin-bottom: 60px;
+}
+
+
+@media screen and (max-width: 500px) {
+    .container-login {
+        min-width: 90%;
+    }
+
+    .container-login h1 {
+        font-size: 2rem;
+    }
+
+    .container-login label {
+        font-size: 1rem;
+    }
+
+    .container-button {
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-login {
+        min-width: 50%;
+    }
+
+    .container-login h1 {
+        font-size: 2rem;
+    }
+
+    .container-login label {
+        font-size: 1rem;
+    }
+}
