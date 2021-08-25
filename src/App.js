@@ -9,7 +9,6 @@ function App() {
     localStorage.setItem('logeado', logeado);
   }
 
-
   return (
       <>
       { 

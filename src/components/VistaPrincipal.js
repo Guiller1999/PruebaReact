@@ -51,9 +51,11 @@ function VistaPrincipal(props) {
                 <button onClick = {() => {
                     let ruta = window.location.href;
                     let nuevaRuta = ruta.substring(0, ruta.lastIndexOf('/'));
-                    window.location.href = nuevaRuta + '/';
+                    
+			        console.log(nuevaRuta);
                     localStorage.setItem('logeado', false);
                     props.setLogeado(false);
+                    //window.location.href = nuevaRuta + '/';
                     }} 
                     className="btn btn-danger">
                     Salir

@@ -30,15 +30,15 @@ function ModalZonas(props) {
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                        <table class="table table-striped table-hover">
-                            <thead class="thead-Persona text-center">
+                        <table className="table table-striped table-hover">
+                            <thead className="thead-Persona text-center">
                                 <tr>
                                     <td>Cod</td>
                                     <td>Nombre</td>
                                     <td>Sueldo</td>
                                 </tr>
                             </thead>
-                            <tbody class="tablaPersona" id="table_persona">
+                            <tbody className="tablaPersona" id="table_persona">
                                 {data.length >0  ? data.map(persona => (
                                     <tr key={persona.codPersona} className="text-center ">
                                         <td>{persona.codPersona}</td>
@@ -47,7 +47,7 @@ function ModalZonas(props) {
                                     </tr>
                                 )):
                                 <tr>
-                                    <td colspan="3" className="text-center">Cargando Datos</td>
+                                    <td colSpan="3" className="text-center">Cargando Datos</td>
                                 </tr>
                                 }
                             </tbody>
