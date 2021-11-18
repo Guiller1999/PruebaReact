@@ -7,7 +7,7 @@ function ModalZonas(props) {
     const [data, setData] = useState({});
 
     useEffect(() => {
-       fetch('https://localhost:44378/api/zonasector', {
+       fetch('https://localhost:44378/api/persona/consultarPersonaSueldo', {
            method: 'POST',
            body: JSON.stringify({
                CodZona: parseInt(props.dataSeleccionada)
@@ -18,7 +18,7 @@ function ModalZonas(props) {
            }
        })
        .then(res => res.json())
-       .then(data => setData(data)) 
+       .then(r => setData(r.result)) 
     });
 
     return (

@@ -8,9 +8,9 @@ function TablaZona(props) {
     const [dataZonaSector , setData] = useState({});
 
     useEffect(() => {
-        fetch('https://localhost:44378/api/zonasector')
+        fetch('https://localhost:44378/api/zonasector/consultarZonaSector')
         .then(res => res.json())
-        .then(data => setData(data))
+        .then(data => setData(data.result))
     }, []);
 
     const handleClick = (data) => {

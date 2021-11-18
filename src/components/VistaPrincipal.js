@@ -25,15 +25,15 @@ function VistaPrincipal(props) {
     const [zonas, setZonas] = useState(null);
 
     const cargarDataPersonas = async () => {
-        let response = await fetch('https://localhost:44378/api/persona');
+        let response = await fetch('https://localhost:44378/api/persona/listarPersonas');
         let data = await response.json();
-       setDataPersonas(data);
+       setDataPersonas(data.result);
     }
 
     const cargarRegistro = async () => {
-        let response = await fetch('https://localhost:44378/api/codigo');
+        let response = await fetch('https://localhost:44378/api/codigo/codigo');
         let data = await response.json();
-        setRegistro(data);
+        setRegistro(data.result);
     }
 
     return (
@@ -52,7 +52,6 @@ function VistaPrincipal(props) {
                     let ruta = window.location.href;
                     let nuevaRuta = ruta.substring(0, ruta.lastIndexOf('/'));
                     
-			        console.log(nuevaRuta);
                     localStorage.setItem('logeado', false);
                     props.setLogeado(false);
                     //window.location.href = nuevaRuta + '/';

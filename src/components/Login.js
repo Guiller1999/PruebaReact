@@ -24,7 +24,7 @@ function Login(props) {
 
     const isUser = async () => {
         try {
-            let response = await fetch('https://localhost:44378/api/usuario', 
+            let response = await fetch('https://localhost:44378/api/usuario/login', 
             {
                 method: 'POST',
                 body: JSON.stringify({
@@ -37,8 +37,7 @@ function Login(props) {
                 }
             });
             let res = await response.json();
-            
-            if(!res) {
+            if(!res.result) {
                 console.log('Hola');
                 setError(true);
                 props.setLogeado(false);

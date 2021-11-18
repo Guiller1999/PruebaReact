@@ -11,7 +11,7 @@ function TablaPersona(props) {
     const handleEliminar = (persona) => {
         console.log(persona);
         if(window.confirm(`Esta seguro que quiere eliminar los datos de ${persona.nomPersona}`)) {
-            fetch('https://localhost:44378/api/persona', {
+            fetch('https://localhost:44378/api/persona/eliminar', {
                 method: 'DELETE',
                 body: JSON.stringify({
                     CodPersona: persona.codPersona
@@ -44,7 +44,7 @@ function TablaPersona(props) {
     }
 
     const cargarZonas = (persona) => {
-        fetch('https://localhost:44378/api/zona', {
+        fetch('https://localhost:44378/api/zona/listarZonas', {
             method: 'POST',
             body: JSON.stringify({
                 CodSector: parseInt(persona.codSector)
@@ -55,7 +55,7 @@ function TablaPersona(props) {
             }
         }).then(res => res.json())
         .then(data => {
-            props.setZonas(data);
+            props.setZonas(data.result);
             props.setRegistro(persona.codPersona);
         });
     }

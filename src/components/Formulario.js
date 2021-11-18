@@ -26,13 +26,13 @@ function Formulario(props) {
     const cargarSectores = async () => {
         let response = await fetch(urlSector);
         let data = await response.json();
-        setSectores(data);
+        setSectores(data.result);
     }
 
     const handleSelect = (e) => {
         const sector = e.target.value;
         
-        fetch(urlZona, {
+        fetch(urlZona + '/listarZonas', {
             method: 'POST',
             body: JSON.stringify({
                 CodSector: parseInt(sector)
@@ -42,7 +42,7 @@ function Formulario(props) {
                 'Content-Type':'application/json'
             }
         }).then(res => res.json())
-        .then(data => props.setZonas(data));
+        .then(data => props.setZonas(data.result));
     }
 
     const handleChange = (e) => {
@@ -76,7 +76,7 @@ function Formulario(props) {
     }
 
     const guardar = () => {
-        fetch(urlPersona, {
+        fetch(urlPersona + '/crear', {
             method: 'POST',
             body: JSON.stringify({
                 CodPersona: parseInt(props.registro) + 1,
@@ -103,7 +103,7 @@ function Formulario(props) {
     }
 
     const actualizar = () => {
-        fetch(urlPersona, {
+        fetch(urlPersona + '/actualizar', {
             method: 'PUT',
             body: JSON.stringify({
                 CodPersona: parseInt(props.registro),
