@@ -31,7 +31,7 @@ function VistaPrincipal(props) {
     }
 
     const cargarRegistro = async () => {
-        let response = await fetch('https://localhost:44378/api/codigo/codigo');
+        let response = await fetch('https://localhost:44378/api/codigo/consultar');
         let data = await response.json();
         setRegistro(data.result);
     }
@@ -54,7 +54,7 @@ function VistaPrincipal(props) {
                     
                     localStorage.setItem('logeado', false);
                     props.setLogeado(false);
-                    //window.location.href = nuevaRuta + '/';
+                    window.location.href = nuevaRuta + '/';
                     }} 
                     className="btn btn-danger">
                     Salir

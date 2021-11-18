@@ -24,7 +24,7 @@ function Formulario(props) {
     }, [props.tipoForm]);
 
     const cargarSectores = async () => {
-        let response = await fetch(urlSector);
+        let response = await fetch(urlSector + '/listar');
         let data = await response.json();
         setSectores(data.result);
     }
